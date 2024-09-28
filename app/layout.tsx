@@ -18,21 +18,21 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Design x Engineering Directory - Discover Top Web Dev Tools",
+  title: "HVAC/R Directory - Discover the Top People in HVAC/R",
   description:
-    "Explore a curated directory of free web development tools for designers and engineers. Find resources for JavaScript, Tailwind CSS, and more!",
+    "Explore a curated directory of HVAC/R pros. Find resources for sales, marketing and more!",
   keywords:
-    "Design, Engineering, Web Development, JavaScript, Tailwind CSS, Supabase, Free Tools, Design Engineering",
+    "HVAC/R, Refrigeration, Heating, Cooling, Air Conditioner, Furnace, Gas Technician",
   structuredData: {
     "@context": "http://schema.org",
     "@type": "WebSite",
-    name: "Design x Engineering Directory",
-    url: "https://www.nextjs.design/",
+    name: "HVAC/R Directory",
+    url: "https://www.getgrowjoegroup.com",
     description:
-      "A free directory of awesome web development tools for design and engineering professionals.",
+      "A free directory of awesome people",
   },
   socialMediaTags: {
-    "og:title": "Design x Engineering Directory - Discover Top Web Dev Tools",
+    "og:title": "HVAC/R Directory - Discover the top people in HVAC/R",
     "og:description":
       "Explore a curated directory of free web development tools for designers and engineers. Find resources for JavaScript, Tailwind CSS, and more!",
     "twitter:card": "summary_large_image",

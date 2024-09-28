@@ -100,21 +100,26 @@ export const ResourceCard: React.FC<{
               <MinimalCardImage alt={data.codename} src={data.logo_src} />
             ) : null}
 
-            <MinimalCardTitle
-              className={cn(
-                " font-semibold mb-0.5",
-                optimisticResource.view_count > 100 ? " text-neutral-800" : ""
-              )}
-            >
-              {data.codename.substring(0, 30)}
-            </MinimalCardTitle>
-            <motion.p
-              initial={{ opacity: 0, y: 5 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-xs leading-3 mb-2 text-neutral-500"
-            >
-              {getLastPathSegment(data.product_website, 10)}
-            </motion.p>
+            <div className="flex flex-col">
+              <MinimalCardTitle
+                className={cn(
+                  "font-semibold mb-1", // Margin for spacing
+                  optimisticResource.view_count > 100 ? "text-neutral-800" : ""
+                )}
+              >
+                {data.codename.substring(0, 30)}
+              </MinimalCardTitle>
+              {/* Subheader line for the punchline aligned with title and description */}
+              <p className="text-sm text-neutral-600 mb-1 pl-1">{data.punchline}</p> {/* Added padding-left for alignment */}
+              <motion.p
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-sm leading-3 mb-2 text-neutral-500 pl-1" // Added padding-left for alignment
+              >
+                {getLastPathSegment(data.product_website, 10)}
+              </motion.p>
+            </div>
+
             <MinimalCardDescription
               className={cn(
                 "text-sm",

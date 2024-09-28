@@ -37,15 +37,15 @@ import { schema } from "./schema"
 const p = () => new Promise((resolve) => setTimeout(() => resolve(""), 900))
 
 const categories = [
-  { label: "Boilerplate", value: "boilerplate" },
+  { label: "Influencer/Thought Leader", value: "influencer" },
   { label: "Analytics", value: "analytics" },
-  { label: "Marketing Tools", value: "marketing-tools" },
-  { label: "Developer Tools", value: "developer-tools" },
+  { label: "Marketing & SEO", value: "marketing" },
+  { label: "Software Tools", value: "software" },
   { label: "E-commerce", value: "e-commerce" },
   { label: "Productivity", value: "productivity" },
-  { label: "Design Tools", value: "design-tools" },
-  { label: "Fintech", value: "fintech" },
-  { label: "Education", value: "education" },
+  { label: "Sales coaching", value: "sales-coaching" },
+  { label: "ServiceTitan expert", value: "servicetitan" },
+  { label: "Housecall Pro expert", value: "housecallpro" },
   { label: "SaaS", value: "saas" },
 ]
 
@@ -64,7 +64,6 @@ export const SubmitTool = () => {
     defaultValues: {
       fullName: "",
       email: "",
-      twitterHandle: "",
       productWebsite: "",
       codename: "",
       punchline: "",
@@ -125,7 +124,7 @@ export const SubmitTool = () => {
         }}
       >
         <GradientHeading size="xs">
-          Let's start with your personal deets
+          Let's start with your personal details
         </GradientHeading>
         <div className="flex flex-wrap gap-1 md:gap-2">
           <FormField
@@ -156,19 +155,6 @@ export const SubmitTool = () => {
           />
           <FormField
             control={form.control}
-            name="twitterHandle"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Your Twitter handle</FormLabel>
-                <FormControl>
-                  <Input placeholder="Your Twitter handle" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
             name="productWebsite"
             render={({ field }) => (
               <FormItem>
@@ -183,16 +169,16 @@ export const SubmitTool = () => {
         </div>
 
         <GradientHeading size="xs">
-          Tell us more about your product
+          Tell us more about yourself
         </GradientHeading>
         <FormField
           control={form.control}
           name="codename"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Your product's name</FormLabel>
+              <FormLabel>Your name or your organization's name</FormLabel>
               <FormControl>
-                <Input placeholder="Your product's codename" {...field} />
+                <Input placeholder="ie. John Smith, Service Agency" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -216,7 +202,7 @@ export const SubmitTool = () => {
           name="description"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>A short description here (~70 words)</FormLabel>
+              <FormLabel>A short description here of what you do (~70 words)</FormLabel>
               <FormControl>
                 <Input placeholder="A short description here" {...field} />
               </FormControl>
@@ -247,7 +233,7 @@ export const SubmitTool = () => {
           name="categories"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Product Category</FormLabel>
+              <FormLabel>Category of expertise</FormLabel>
               <Select
                 onValueChange={field.onChange}
                 defaultValue={field.value}

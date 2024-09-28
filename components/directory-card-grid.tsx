@@ -126,11 +126,15 @@ export const FeaturedGrid: React.FC<{ featuredData: Product[] }> = ({
   featuredData,
 }) => {
   return (
-    <div className="w-full mx-auto max-w-7xl bg-neutral-50/40 dark:bg-neutral-950/40 border border-dashed border-black/10 py-3 px-3 rounded-2xl">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-4">
-        {featuredData.map((data, index) => (
-          <ResourceCard trim={true} data={data} order={index} />
-        ))}
+    <div className="w-full mx-auto max-w-7xl">
+      {/* Title added outside and on top of the grey container */}
+      <h2 className="text-xl font-bold mb-4">Featured</h2>
+      <div className="bg-neutral-50/40 dark:bg-neutral-950/40 border border-dashed border-black/10 py-3 px-3 rounded-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-4">
+          {featuredData.map((data, index) => (
+            <ResourceCard trim={true} data={data} order={index} />
+          ))}
+        </div>
       </div>
     </div>
   )
@@ -139,40 +143,40 @@ export const FeaturedGrid: React.FC<{ featuredData: Product[] }> = ({
 export const EmptyFeaturedGrid = () => {
   const emptyData = [
     {
-      codename: "Join the cult",
+      codename: "Join the community",
       punchline: "Next.j, Supabase & Tailwind Starters",
-      product_website: "https://newcult.co",
+      product_website: "https://growjoegroup.com",
       description:
-        "Check out newcult.co for the premium version of this template",
-      logo_src: "/ad-placeholder-metrics.png",
+        "Get access to experts in your field",
+      logo_src: "/Group 677.png",
       tags: ["featured"],
       labels: ["featured-ad"],
     },
     {
-      codename: "To get Admin Dashboard",
-      product_website: "https://newcult.co",
-      punchline: "Next.j, Supabase & Tailwind Starters",
+      codename: "Tom Rand",
+      product_website: "https://www.getgrowjoe.com",
+      punchline: "Tom ",
       description:
-        "Join the cult and get access to the admin dashboard for this template.",
-      logo_src: "/ad-placeholder-1.png",
+        "Leads marketing at largest Canadian co-op",
+      logo_src: "/Tom-Rand-CROP.png",
       tags: ["featured"],
       labels: ["featured-ad"],
     },
     {
-      codename: "And AI scripts",
-      product_website: "https://newcult.co",
+      codename: "Shawn Khan",
+      product_website: "https://www.getgrowjoe.com",
       punchline: "Next.j, Supabase & Tailwind Starters",
       description:
-        "Includes AI scripts to quickly add new products to your directory..",
-      logo_src: "/ad-placeholder-tags.png",
+        "Sold $8m through a virtual sales process",
+      logo_src: "/shawnkhan.jpeg",
       tags: ["featured"],
       labels: ["featured-ad"],
-    },
+    }
   ]
 
   return (
     <div className="w-full mx-auto max-w-7xl  bg-black/20 dark:bg-neutral-950/40 border border-dashed border-black/10 py-3 px-3 rounded-[1.9rem]">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">  
         {emptyData.map((data, index) => (
           <Link
             href="https://newcult.co"
