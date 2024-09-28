@@ -64,6 +64,7 @@ export const SubmitTool = () => {
     defaultValues: {
       fullName: "",
       email: "",
+      twitterHandle: "",
       productWebsite: "",
       codename: "",
       punchline: "",
@@ -263,11 +264,10 @@ export const SubmitTool = () => {
           )}
         />
 
-        {isValid && (
-          <StyledButton disabled={loading} type="submit">
-            Submit
-          </StyledButton>
-        )}
+        {/** Remove the isValid check to always show the submit button */}
+        <StyledButton disabled={loading} type="submit">
+          Submit
+        </StyledButton>
       </form>
     </Form>
   )
