@@ -3,11 +3,7 @@ import { z } from "zod"
 export const schema = z.object({
   fullName: z.string().trim().min(1, { message: "Full name is required." }),
   email: z.string().trim(),
-  twitterHandle: z
-    .string()
-    .trim()
-    .min(1, { message: "Twitter handle is required." }),
-
+  
   productWebsite: z.string().trim().url({ message: "Invalid URL." }),
   codename: z.string().trim().min(1, { message: "Codename is required." }),
   punchline: z
@@ -19,7 +15,7 @@ export const schema = z.object({
     .trim()
     .min(1, { message: "Description is required." }),
   categories: z.string().trim().min(1, { message: "Category is required." }),
-  images: z.any(),
+  images: z.any().optional(), // Make images optional
   logo_src: z.any().optional(),
 })
 

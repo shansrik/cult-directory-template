@@ -96,10 +96,13 @@ export async function onSubmitToolAction(
 ): Promise<FormState> {
   const db = createClient()
   const data = Object.fromEntries(formData.entries())
+  console.log("Form Data:", data); // Log the form data
+
   const parsed = schema.safeParse(data)
+  console.log("Validation Result:", parsed); // Log validation result
 
   if (!parsed.success) {
-    console.error("Form validation failed")
+    console.error("Form validation failed", parsed.error)
     const fields: Record<string, string> = {}
     for (const key of Object.keys(data)) {
       fields[key] = data[key].toString()
@@ -121,6 +124,8 @@ export async function onSubmitToolAction(
 
     let logoUrl = ""
     const logoFile = formData.get("images") as File
+    console.log("Logo File:", logoFile); // Log the logo file
+
     if (logoFile) {
       logoUrl = await uploadLogoFile(db, logoFile, parsed.data.codename)
     }
@@ -158,7 +163,7 @@ export async function onSubmitToolAction(
     }
 
     if (config.allowNewCategories) {
-      await insertIfNotExists(db, "categories", parsed.data.categories)
+      await insertIfNotExists(db, "categories", parsed.data.categories);
     }
 
     const productData = {
@@ -176,7 +181,7 @@ export async function onSubmitToolAction(
       labels,
     }
 
-    console.log("Inserting product data")
+    console.log("Inserting product data:", productData); // Log product data before insertion
     const { error } = await db.from("products").insert([productData]).select()
 
     if (error) {

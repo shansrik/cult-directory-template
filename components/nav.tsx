@@ -265,7 +265,7 @@ function ProductNav({
         {categories && categories?.length > 0 && (
           <div className="flex items-center gap-2 mt-6 text-muted-foreground">
             <BoxIcon className="size-5 stroke-yellow-400" />
-            <p className="text-sm md:hidden">Categories</p>
+            <p className="text-sm">Categories</p>
           </div>
         )}
         <ul className="mt-2 w-36 flex flex-col gap-2 items-start justify-center py-2">
@@ -286,7 +286,7 @@ function ProductNav({
                 prefetch={false}
               >
                 <span className="px-1">
-                  {category && truncateString(category, 12)}
+                  {category && truncateString(category, 16)}
                 </span>
               </Link>
             </li>
