@@ -40,7 +40,7 @@ const categories = [
   { label: "Influencer/Thought Leader", value: "influencer" },
   { label: "Analytics", value: "analytics" },
   { label: "Marketing & SEO", value: "marketing" },
-  { label: "Software Tools", value: "software" },
+  { label: "Software Tools", value: "software-tools" },
   { label: "E-commerce", value: "e-commerce" },
   { label: "Productivity", value: "productivity" },
   { label: "Sales coaching", value: "sales-coaching" },
