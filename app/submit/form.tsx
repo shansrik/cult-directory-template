@@ -64,7 +64,6 @@ export const SubmitTool = () => {
     defaultValues: {
       fullName: "",
       email: "",
-      twitterHandle: "",
       productWebsite: "",
       codename: "",
       punchline: "",

@@ -144,7 +144,7 @@ export const EmptyFeaturedGrid = () => {
   const emptyData = [
     {
       codename: "Join the community",
-      punchline: "Next.j, Supabase & Tailwind Starters",
+      punchline: "",
       product_website: "https://growjoegroup.com",
       description:
         "Get access to experts in your field",
@@ -155,7 +155,7 @@ export const EmptyFeaturedGrid = () => {
     {
       codename: "Tom Rand",
       product_website: "https://www.getgrowjoe.com",
-      punchline: "Tom ",
+      punchline: "",
       description:
         "Leads marketing at largest Canadian co-op",
       logo_src: "/Tom-Rand-CROP.png",
@@ -165,7 +165,7 @@ export const EmptyFeaturedGrid = () => {
     {
       codename: "Shawn Khan",
       product_website: "https://www.getgrowjoe.com",
-      punchline: "Next.j, Supabase & Tailwind Starters",
+      punchline: "",
       description:
         "Sold $8m through a virtual sales process",
       logo_src: "/shawnkhan.jpeg",

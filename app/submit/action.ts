@@ -164,7 +164,6 @@ export async function onSubmitToolAction(
     const productData = {
       full_name: parsed.data.fullName,
       email: parsed.data.email,
-      twitter_handle: parsed.data.twitterHandle,
       product_website: parsed.data.productWebsite,
       codename: parsed.data.codename,
       punchline: parsed.data.punchline,
